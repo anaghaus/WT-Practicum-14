@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Information System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Information System</h1>
+    <p>Interactive Academic Dashboard</p>
+</header>
+
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#courses">Courses</a>
+    <a href="#exams">Examinations</a>
+</nav>
+
+<main>
+
+    <section id="profile">
+        <h2>Student Profile</h2>
+        <div class="profile-card">
+            <img src="https://placehold.co/120x120?text=Student"
+                 alt="Student profile">
+            <div>
+                <h3>Student Name: Ananya</h3>
+                <p>Register Number: 24CS101</p>
+                <p>Department: Computer Science</p>
+                <p>Year: First Year</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="attendance">
+        <h2>Attendance Information</h2>
+        <div class="attendance-card">
+            <p>Overall Attendance: 92%</p>
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Interactive Course Explorer</h2>
+        <p>Search and filter your academic courses.</p>
+
+        <div class="filter-container">
+            <input type="text" id="searchInput"
+                   placeholder="Search course name...">
+
+            <select id="departmentFilter">
+                <option value="all">All Departments</option>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics</option>
+                <option value="MECH">Mechanical</option>
+            </select>
+
+            <select id="semesterFilter">
+                <option value="all">All Semesters</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+            </select>
+        </div>
+
+        <div id="courseContainer" class="course-grid">
+
+            <div class="course-card" data-department="CSE" data-semester="1">
+                <img src="https://placehold.co/300x150?text=Programming"
+                     alt="Programming course">
+                <h3>Programming in C</h3>
+                <p>Department: CSE</p>
+                <p>Semester: 1</p>
+                <details>
+                    <summary>View Details</summary>
+                    <p>Learn basic programming concepts, variables,
+                       loops and functions using C.</p>
+                </details>
+            </div>
+
+            <div class="course-card" data-department="CSE" data-semester="2">
+                <img src="https://placehold.co/300x150?text=Web+Technology"
+                     alt="Web Technology course">
+                <h3>Web Technology</h3>
+                <p>Department: CSE</p>
+                <p>Semester: 2</p>
+                <details>
+                    <summary>View Details</summary>
+                    <p>Learn HTML, CSS and JavaScript to develop
+                       interactive websites.</p>
+                </details>
+            </div>
+
+            <div class="course-card" data-department="ECE" data-semester="1">
+                <img src="https://placehold.co/300x150?text=Digital+Systems"
+                     alt="Digital Systems course">
+                <h3>Digital System Design</h3>
+                <p>Department: ECE</p>
+                <p>Semester: 1</p>
+                <details>
+                    <summary>View Details</summary>
+                    <p>Study logic gates, Boolean algebra and
+                       digital circuits.</p>
+                </details>
+            </div>
+
+            <div class="course-card" data-department="MECH" data-semester="2">
+                <img src="https://placehold.co/300x150?text=Engineering"
+                     alt="Engineering course">
+                <h3>Engineering Mechanics</h3>
+                <p>Department: MECH</p>
+                <p>Semester: 2</p>
+                <details>
+                    <summary>View Details</summary>
+                    <p>Understand forces, motion and basic
+                       engineering principles.</p>
+                </details>
+            </div>
+
+        </div>
+
+        <p id="noResults">No courses found.</p>
+    </section>
+
+    <section id="exams">
+        <h2>Examination Information</h2>
+        <ul>
+            <li>Internal Assessment 1 - Completed</li>
+            <li>Internal Assessment 2 - Upcoming</li>
+            <li>Semester Examination - To be announced</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Student Information System | Interactive Dashboard</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
